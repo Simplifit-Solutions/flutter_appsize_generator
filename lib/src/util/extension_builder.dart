@@ -26,6 +26,7 @@ class ExtensionBuilderFactory {
     _buf.writeln('extension ${_className}Extension on $_className {');
     for (final ex in _extensionStr) {
       _buf.writeln(ex);
+      if (_extensionStr.last != ex) _buf.writeln();
     }
     _buf.writeln('}');
     return _buf.toString();
@@ -35,6 +36,6 @@ class ExtensionBuilderFactory {
     if (includesMathLib) {
       _imports.add("import 'dart:math';");
     }
-    _extensionStr.add(op);
+    _extensionStr.add('  $op');
   }
 }

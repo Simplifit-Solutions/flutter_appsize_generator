@@ -7,7 +7,8 @@ import 'package:flutter_appsize_generator/src/generator/sized_box_extension_gene
 import 'package:flutter_appsize_generator/src/util/yaml_parser.dart';
 
 Future<void> main(List<String> arguments) async {
-  final yamlParser = YamlParser()..load();
+  final yamlParser = YamlParser();
+  await yamlParser.init();
   final rasterSize = yamlParser.rasterSize;
   final maxSize = yamlParser.maxSize;
 
