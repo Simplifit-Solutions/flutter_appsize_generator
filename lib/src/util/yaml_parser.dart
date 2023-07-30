@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:flutter_appsize_generator/src/constants.dart';
 import 'package:yaml/yaml.dart';
 
 /// inspired by vlazdra's github repository flutter_native_splash
@@ -10,8 +9,8 @@ class YamlParser {
 
   Map<String, dynamic>? _yamlMap;
 
-  int get rasterSize => _yamlMap?['raster_size'] ?? defaultRasterSize;
-  int get maxSize => _yamlMap?['max_size'] ?? defaultMaxSize;
+  int? get rasterSize => _yamlMap?['raster_size'];
+  int? get maxSize => _yamlMap?['max_size'];
 
   Future<void> init() async {
     final filePath = 'pubspec.yaml';
