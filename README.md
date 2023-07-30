@@ -21,7 +21,7 @@ Install `flutter_appsize_generator` as `dev_dependency` in your `pubspec.yaml`.
 ```Yaml
 dev_dependendies:
   flutter_appsize_generator:
-    url: https://github.com/Simplifit-Solutions/flutter_appsize_generator
+    git: https://github.com/Simplifit-Solutions/flutter_appsize_generator
 ```
 
 Run `flutter pub run flutter_appsize_generator:generate` to generate the files.
