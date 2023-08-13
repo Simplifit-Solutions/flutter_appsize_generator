@@ -1,6 +1,6 @@
 name: flutter_appsize_generator
 description: This package is a simple provider for some IU components.
-version: 0.2.0
+version: 0.2.1
 repository: https://github.com/Simplifit-Solutions/flutter_appsize_generator
 
 environment:
