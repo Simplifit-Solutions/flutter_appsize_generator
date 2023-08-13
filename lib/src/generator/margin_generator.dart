@@ -12,11 +12,17 @@ class MarginGenerator {
     _addExports();
     buf.writeln();
 
+    buf.writeln(
+      "const SizedBox horizontalMargin0 = SizedBox(width: AppSize.s0);",
+    );
     for (int step = rasterSize; step <= maxSize; step += rasterSize) {
       _addHorizontalMargin(step);
     }
     buf.writeln();
 
+    buf.writeln(
+      "const SizedBox verticalMargin0 = SizedBox(width: AppSize.s0);",
+    );
     for (int step = rasterSize; step <= maxSize; step += rasterSize) {
       _addVerticalMargin(step);
     }
@@ -38,11 +44,11 @@ class MarginGenerator {
 
   void _addHorizontalMargin(int step) {
     buf.writeln(
-        "const SizedBox horizontalMargin$step = SizedBox(width: AppSize.appSize$step);");
+        "const SizedBox horizontalMargin$step = SizedBox(width: AppSize.s$step);");
   }
 
   void _addVerticalMargin(int step) {
     buf.writeln(
-        "const SizedBox verticalMargin$step = SizedBox(height: AppSize.appSize$step);");
+        "const SizedBox verticalMargin$step = SizedBox(height: AppSize.s$step);");
   }
 }

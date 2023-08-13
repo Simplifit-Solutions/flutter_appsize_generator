@@ -9,8 +9,8 @@ class ClassBuilderFactory {
         _isStatic = isStatic,
         _className = className;
 
-  void addConstFields(String name, String type, dynamic value) {
-    _constFields.add('  static const $type $name = $value;');
+  void addConstFields<T>(String name, dynamic value) {
+    _constFields.add('  static const $T $name = $value;');
   }
 
   String build() {
