@@ -21,7 +21,7 @@ class MarginGenerator {
     buf.writeln();
 
     buf.writeln(
-      "const SizedBox verticalMargin0 = SizedBox(width: AppSize.s0);",
+      "const SizedBox verticalMargin0 = SizedBox(height: AppSize.s0);",
     );
     for (int step = rasterSize; step <= maxSize; step += rasterSize) {
       _addVerticalMargin(step);
